@@ -1,0 +1,3 @@
+export default {
+  url: 'http://nabi.pl/test/cmc_proxy/cmc_proxy.php',
+};
