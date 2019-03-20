@@ -7,6 +7,7 @@
     "braces": "^2.3.2",
     "bulma": "^0.7.4",
     "bulma-extensions": "^4.1.0",
+    "numeral": "^2.0.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.0",

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import numeral from 'numeral';
 
 import styles from './Overview.module.css';
 
@@ -12,10 +13,10 @@ class Overview extends Component {
         <tr key={ coin.id }>
           <td>{ coin['cmc_rank'] }</td>
           <td>{ coin.name }</td>
-          <td>{ coin.quote.USD.price.toFixed(2).toLocaleString() }</td>
-          <td>{ coin.quote.USD['percent_change_24h'].toFixed(2).toLocaleString() }</td>
-          <td>{ coin.quote.USD['market_cap'].toFixed(2).toLocaleString() }</td>
-          <td>{ coin.quote.USD['volume_24h'].toFixed(2).toLocaleString() }</td>
+          <td>{ numeral(coin.quote.USD.price.toFixed(2).toLocaleString()).format('$0,0.00') }</td>
+          <td>{ numeral(coin.quote.USD['percent_change_24h']).format('0,0.00%') }</td>
+          <td>{ numeral(coin.quote.USD['market_cap']).format('$0,0.00') }</td>
+          <td>{ numeral(coin.quote.USD['volume_24h']).format('$0,0.00') }</td>
         </tr>
       );
     });
