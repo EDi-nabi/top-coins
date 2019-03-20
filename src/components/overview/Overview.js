@@ -9,13 +9,13 @@ class Overview extends Component {
 
     const rows = this.props.coins.map(coin => {
       return (
-        <tr>
+        <tr key={ coin.id }>
           <td>{ coin['cmc_rank'] }</td>
           <td>{ coin.name }</td>
-          <td>{ coin.quote.USD.price }</td>
-          <td>{ coin.quote.USD['percent_change_24h'] }</td>
-          <td>{ coin.quote.USD['market_cap'] }</td>
-          <td>{ coin.quote.USD['volume_24h'] }</td>
+          <td>{ coin.quote.USD.price.toFixed(2).toLocaleString() }</td>
+          <td>{ coin.quote.USD['percent_change_24h'].toFixed(2).toLocaleString() }</td>
+          <td>{ coin.quote.USD['market_cap'].toFixed(2).toLocaleString() }</td>
+          <td>{ coin.quote.USD['volume_24h'].toFixed(2).toLocaleString() }</td>
         </tr>
       );
     });

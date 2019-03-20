@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -18,14 +18,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className={ styles.App }>
-        <h1>Top Coins</h1>
+      <Fragment>
         <Navigation />
-        <Switch>
-          { this.props.loaded ? <Route path="/liquidity" component={ Liquidity } /> : <Spinner /> }
-          { this.props.loaded ? <Route path="/" component={ Overview } /> : <Spinner /> }
-        </Switch>
-      </div>
+        <section className={ styles.Content }>
+          <Switch>
+            { this.props.loaded ? <Route path="/liquidity" component={ Liquidity } /> : <Spinner /> }
+            { this.props.loaded ? <Route path="/" component={ Overview } /> : <Spinner /> }
+          </Switch>
+        </section>
+      </Fragment>
     );
   }
 }

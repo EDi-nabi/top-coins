@@ -1,1 +1,10 @@
-.App {}
+section.Content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section h1 {
+  width: 100%;
+  border-bottom: 1px #e2e3e7 solid;
+  padding-bottom: 0.3em;
+}
