@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { config } from '../config/top-coin.config';
+import config from '../config/top-coin.config';
 
 const axiosInstance = axios.create({
   baseURL: config.url,
