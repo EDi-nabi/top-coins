@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch, withRouter } from 'react-router-dom';
+
+import styles from './App.module.css';
+import Navigation from './components/navigation/Navigation';
+import Overview from './components/overview/Overview';
+import Liquidity from './components/liquidity/Liquidity';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className={ styles.App }>
+        <h1>Top Coins</h1>
+        <Navigation />
+        <Switch>
+          <Route path="/liquidity" component={ Liquidity } />
+          <Route path="/" component={ Overview } />
+        </Switch>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
