@@ -1,20 +1,21 @@
 {
   "name": "top-coins",
   "version": "0.1.0",
+  "homepage": "http://nabi.pl/test/top-coins",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
     "braces": "^2.3.2",
-    "bulma": "^0.7.4",
-    "bulma-extensions": "^4.1.0",
     "numeral": "^2.0.6",
     "react": "^16.8.4",
+    "react-container-dimensions": "^1.4.1",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
-    "redux-saga": "^1.0.2"
+    "redux-saga": "^1.0.2",
+    "taucharts": "^2.7.1"
   },
   "scripts": {
     "start": "react-scripts start",

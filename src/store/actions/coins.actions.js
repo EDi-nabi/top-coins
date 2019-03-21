@@ -25,3 +25,10 @@ export const coinsSetError = (payload) => {
     payload
   }
 }
+
+export const coinsSetAmount = (payload) => {
+  return {
+    type: ActionTypes.COINS_SET_AMOUNT,
+    payload
+  }
+}

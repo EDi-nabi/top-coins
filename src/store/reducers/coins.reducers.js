@@ -5,6 +5,7 @@ const initialState = {
   loading: false,
   loaded: false,
   error: false,
+  amount: 100,
 }
 
 const coinsReducer = (state = initialState, action) => {
@@ -32,6 +33,12 @@ const coinsReducer = (state = initialState, action) => {
         loading: false,
         loaded: false,
         error: action.payload.error,
+      };
+
+    case ActionTypes.COINS_SET_AMOUNT:
+      return {
+        ...state,
+        amount: action.payload.amount,
       };
 
       default:

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Navigation.module.css';
+import Amount from './amount/Amount';
 
 class Navigation extends Component {
   render() {
@@ -16,6 +17,7 @@ class Navigation extends Component {
             <li><NavLink exact to='/liquidity' activeClassName={styles.active}>Liquidity</NavLink></li>
           </ul>
         </nav>
+        { this.props.loaded ? <Amount /> : null }
       </Fragment>
     );
   }
