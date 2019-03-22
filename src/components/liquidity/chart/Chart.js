@@ -12,7 +12,7 @@ import 'taucharts/dist/plugins/legend.css';
 
 import styles from './Chart.module.css';
 
-class Liquidity extends Component {
+export class Chart extends Component {
   componentDidMount() {
     this.renderChart();
   }
@@ -92,7 +92,6 @@ class Liquidity extends Component {
 	}
 
   render() {
-    console.log(this.props.width);
 		return (<div style={{ width: this.props.width, height: this.props.width }} ref="placeholder"></div>);
   }
 }
@@ -104,4 +103,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Liquidity);
+export default connect(mapStateToProps)(Chart);

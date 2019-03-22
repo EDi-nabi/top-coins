@@ -11,7 +11,7 @@ import Liquidity from './components/liquidity/Liquidity';
 import Spinner from './components/common/spinner/Spinner';
 import withErrorHandler from './components/hoc/with-error-handler/withErrorHandler';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     if (!this.props.loaded) {
       this.props.coinsLoad();

@@ -1,11 +1,10 @@
 {
   "name": "top-coins",
   "version": "0.1.0",
-  "homepage": "http://nabi.pl/test/top-coins",
+  "homepage": "http://top-coins.nabi.pl",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "braces": "^2.3.2",
     "numeral": "^2.0.6",
     "react": "^16.8.4",
     "react-container-dimensions": "^1.4.1",
@@ -31,5 +30,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2"
+  }
 }

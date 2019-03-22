@@ -4,7 +4,7 @@ import numeral from 'numeral';
 
 import styles from './Overview.module.css';
 
-class Overview extends Component {
+export class Overview extends Component {
   render() {
     const rows = this.props.coins.slice(0, this.props.amount).map(coin => {
       return (

@@ -4,6 +4,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 3em;
+  font-size: 0.7em;
 }
 
 tr:nth-child(even) {
@@ -38,3 +39,14 @@ td:nth-child(2) {
   padding-right: 6px;
 }
 
+@media (min-width: 630px) {
+  table {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 760px) {
+  table {
+    font-size: 1em;
+  }
+}
