@@ -2,22 +2,21 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { Chart } from './Chart';
+import { Echart } from './Echart';
 import mockCoins from '../../../tests/mock_coins';
 
 configure({
   adapter: new Adapter(),
 });
 
-describe('<Chart />', () => {
+describe('<Echart />', () => {
   let wrapper;
 
   beforeEach(() => {
     // turn off chart rendering
-    jest.spyOn(Chart.prototype, 'componentDidMount').mockImplementation(() => {});
-    jest.spyOn(Chart.prototype, 'componentDidUpdate').mockImplementation(() => {});
-    jest.spyOn(Chart.prototype, 'componentWillUnmount').mockImplementation(() => {});
-    wrapper = shallow(<Chart coins={ mockCoins() } amount="10" />);
+    jest.spyOn(Echart.prototype, 'componentDidMount').mockImplementation(() => {});
+    jest.spyOn(Echart.prototype, 'componentDidUpdate').mockImplementation(() => {});
+    wrapper = shallow(<Echart coins={ mockCoins() } amount="10" />);
   });
 
   it('should return appropriate amount of data for the chart', () => {

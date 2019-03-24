@@ -25,6 +25,7 @@ export class App extends Component {
         <section className={ styles.Content }>
           <Switch>
             { this.props.loaded ? <Route path="/liquidity" component={ Liquidity } /> : <Spinner /> }
+            { this.props.loaded ? <Route path="/liquidity2" render={ () => <Liquidity charts="taucharts" /> } /> : <Spinner /> }
             { this.props.loaded ? <Route path="/" component={ Overview } /> : <Spinner /> }
           </Switch>
         </section>

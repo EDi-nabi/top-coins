@@ -31,12 +31,12 @@ describe('<App />', () => {
 
   it('should render <Spinner />\'s when loaded is false', () => {
     wrapper = shallow(<App coins={ [] } loaded={ false } coinsLoad={ coinsLoad }/>);
-    expect(wrapper.find(Spinner)).toHaveLength(2);
+    expect(wrapper.find(Spinner)).toHaveLength(3);
   });
 
   it('should render <Route />\'s when loaded is true', () => {
     wrapper = shallow(<App coins={ [] } loaded={ true } coinsLoad={ coinsLoad }/>);
-    expect(wrapper.find(Route)).toHaveLength(2);
+    expect(wrapper.find(Route)).toHaveLength(3);
   });
 
   it('should always render <Navigation />', () => {

@@ -13,7 +13,8 @@ const navigation = (props) => {
       <nav className={ styles.Navigation }>
         <ul>
           <li><NavLink exact to='/' activeClassName={styles.active}>Overview</NavLink></li>
-          <li><NavLink exact to='/liquidity' activeClassName={styles.active}>Liquidity</NavLink></li>
+          <li><NavLink exact to='/liquidity' activeClassName={styles.active}>Liquidity (ECharts)</NavLink></li>
+          <li><NavLink exact to='/liquidity2' activeClassName={styles.active}>Liquidity (TauCharts)</NavLink></li>
         </ul>
       </nav>
       { props.loaded ? <Amount /> : null }

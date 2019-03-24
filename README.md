@@ -34,7 +34,7 @@ Other third party libraries used in the project are:<br>
 
 ## Responsibility
 
-TauCharts don't deal well with window resizing. But it's not what responsibility is about. I added some breakpoints here and there to set the right dimensions for the chart container. ReactContainerDimensions component will send those dimensions to the chart and chart will rerender if needed. It looks pretty well in Chrome mobile testing mode, but I noticed some strange behaviour in Chrome on my phone. The chart is growing when I scroll to the upper/lower edge of the site. I works fine in Opera Touch. I'll look at it if I manage, but it seems to be the library problem, not my css.
+TauCharts don't deal well with window resizing. But it's not what responsibility is about. I added some breakpoints here and there to set the right dimensions for the chart container. ReactContainerDimensions component will send these dimensions to the chart and chart will rerender if needed. It looks pretty well in Chrome mobile testing mode, but I noticed some strange behaviour in Chrome on my phone. The chart is growing when I scroll to the upper/lower edge of the site. I works fine in Opera Touch. I'll look at it if I manage, but it seems to be the library problem, not my css.
 
 Also the table on the overview site won't scale well. It's wide, it have lots of columns with big numbers, so it's normal. I added few breakpoints for smaller screens to decrease the font size a bit, but obviously I couldn't go too far with such solution.
 
@@ -57,6 +57,11 @@ That's why I'm looking for the job. Not only to kill the boredom, have fun and d
 
 It would be a good idea to research some other charts libraries and do the chart nicer and more readable.<br>
 I should also use LESS or SASS instead of CSS. I borrowed the main styling from my [other test project](https://github.com/EDi-nabi/githubers), just to save some time, but I've lost all I gained because I had to rewrite it from LESS to CSS and copy/paste colors everywhere. :)
+
+## Sunday update
+
+These "not very pretty" charts bothered me so much, I decided to try out another library. [ECharts](https://ecomfe.github.io/echarts-doc/public/en/index.html) version is much better, prettier and have these fancy sliders to zoom into the crowded corner. :)
+
 
 # Standard React readme
 

@@ -4,7 +4,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import ContainerDimensions from 'react-container-dimensions';
 
 import Liquidity from './Liquidity';
-import { Chart } from './chart/Chart';
 
 configure({
   adapter: new Adapter(),

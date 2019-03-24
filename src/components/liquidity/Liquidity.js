@@ -2,7 +2,8 @@ import React from 'react';
 import ContainerDimensions from 'react-container-dimensions';
 
 import styles from './Liquidity.module.css';
-import Chart from './chart/Chart';
+import Echart from './echart/Echart';
+import TauChart from './tauchart/TauChart';
 
 const liquidity = (props) => {
   return (
@@ -10,7 +11,7 @@ const liquidity = (props) => {
       <h1>Liquidity</h1>
       <div className={ styles.container }>
         <ContainerDimensions>
-          <Chart />
+          { props.charts === 'taucharts' ? <TauChart /> : <Echart /> }
         </ContainerDimensions>
       </div>
     </div>

@@ -10,9 +10,9 @@ import 'taucharts/dist/plugins/legend.css';
 // import tauBrewer from 'taucharts/dist/plugins/color-brewer';
 // import 'taucharts/dist/colorbrewer.css';
 
-import styles from './Chart.module.css';
+import styles from './TauChart.module.css';
 
-export class Chart extends Component {
+export class TauChart extends Component {
   componentDidMount() {
     this.renderChart();
   }
@@ -103,4 +103,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Chart);
+export default connect(mapStateToProps)(TauChart);
