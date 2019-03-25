@@ -38,7 +38,7 @@ header h1 {
   list-style: none;
   margin: 0;
   display: block;
-  padding: 0 0 0 20%;
+  padding: 0;
 }
 
 .Navigation ul li {
@@ -76,7 +76,7 @@ header h1 {
     margin: 0 auto;
   }
 
-  .Navigation ul li {
+.Navigation ul li {
     margin-right: 1em;
     display: inline-block;
   }
