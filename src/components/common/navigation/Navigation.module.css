@@ -38,11 +38,11 @@ header h1 {
   list-style: none;
   margin: 0;
   display: block;
+  padding: 0 0 0 20%;
 }
 
 .Navigation ul li {
-  margin-right: 1em;
-  display: inline-block;
+  display: block;
 }
 
 .Navigation ul li a {
@@ -55,9 +55,8 @@ header h1 {
   text-transform: uppercase;
   background: #3b3b3b;
   color: #fdfdfd;
-  padding: 7px 10px 5px 10px;
   box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.25);
-  border-radius: 0 0 6px 6px;
+  padding: 7px 10px 5px 5%;
 }
 
 .Navigation ul li a:hover {
@@ -69,4 +68,21 @@ header h1 {
   background: #f9d10a;
   color: #131313;
   cursor: default;
+}
+
+@media (min-width: 560px) {
+  .Navigation {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .Navigation ul li {
+    margin-right: 1em;
+    display: inline-block;
+  }
+
+  .Navigation ul li a {
+    padding: 7px 10px 5px 10px;
+    border-radius: 0 0 6px 6px;
+  }
 }
