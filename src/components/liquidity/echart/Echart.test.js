@@ -16,6 +16,7 @@ describe('<Echart />', () => {
     // turn off chart rendering
     jest.spyOn(Echart.prototype, 'componentDidMount').mockImplementation(() => {});
     jest.spyOn(Echart.prototype, 'componentDidUpdate').mockImplementation(() => {});
+    jest.spyOn(Echart.prototype, 'componentWillUnmount').mockImplementation(() => {});
     wrapper = shallow(<Echart coins={ mockCoins() } amount="10" />);
   });
 

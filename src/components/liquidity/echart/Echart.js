@@ -22,6 +22,10 @@ export class Echart extends Component {
     this.chart.resize({opts: { width: this.props.width, height: this.props.width }});
   }
 
+  componentWillUnmount() {
+    this.chart.dispose();
+  }
+
   getChartData() {
     return this.props.coins.slice(0, this.props.amount).map(coin => {
       return [
