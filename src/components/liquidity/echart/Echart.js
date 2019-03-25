@@ -133,10 +133,10 @@ export class Echart extends Component {
           data: this.getChartData(),
           tooltip: {
             formatter: (params) => {
-              return params.data[4] + ':<br>' +
-                'Market cap: ' + numeral(params.data[0]).format('$0,0.00') + '<br>' +
-                'Volume (24h): ' + numeral(params.data[1]).format('$0,0.00') + '<br>' +
-                'Price change (24h): ' + numeral(params.data[3] / 100).format('0,0.00%');
+              return `${params.data[4]}:<br>
+                Market cap: ${numeral(params.data[0]).format('$0,0.00')}<br>
+                Volume (24h): ${numeral(params.data[1]).format('$0,0.00')}<br>
+                Price change (24h): ${numeral(params.data[3] / 100).format('0,0.00%')}`;
             },
           },
           type: 'scatter',
