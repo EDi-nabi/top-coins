@@ -74,6 +74,8 @@ export class Echart extends Component {
         data: ['Coins'],
       },
       xAxis: {
+        type: 'log',
+        logBase: 10,
         axisLabel: {
           formatter: (val, index) => numeral(val).format('0a'),
         },
@@ -84,6 +86,8 @@ export class Echart extends Component {
         }
       },
       yAxis: {
+        type: 'log',
+        logBase: 10,
         axisLabel: {
           formatter: (val, index) => numeral(val).format('0a'),
         },
@@ -159,16 +163,34 @@ export class Echart extends Component {
               shadowBlur: 10,
               shadowColor: 'rgba(162, 92, 3, 0.2)',
               shadowOffsetY: 5,
-              color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
-                {
-                  offset: 0,
-                  color: 'rgb(249, 209, 10)',
-                },
-                {
-                  offset: 1,
-                  color: 'rgb(249, 175, 10)',
+              color: (data) => {
+                console.log(data.data[3]);
+                if(data.data[3] < 0) {
+                  return '#ee0000';
+                } else {
+                  return '#00ff00';
+                  // new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
+                  //   {
+                  //     offset: 0,
+                  //     color: 'rgb(249, 209, 10)',
+                  //   },
+                  //   {
+                  //     offset: 1,
+                  //     color: 'rgb(249, 175, 10)',
+                  //   }
+                  // ])
                 }
-              ]),
+              },
+              // color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
+              //   {
+              //     offset: 0,
+              //     color: 'rgb(249, 209, 10)',
+              //   },
+              //   {
+              //     offset: 1,
+              //     color: 'rgb(249, 175, 10)',
+              //   }
+              // ]),
             }
           }
         },
