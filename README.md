@@ -13,14 +13,6 @@ Test project in React presenting a simple analysis of crypto assets with data do
 ##### First problem
 ...was with the CoinMarketCap API. It's prohibited to make HTTP requests with Javascript on the client side, so I had to create a simple proxy on the server to get the data I needed.
 
-##### Second problem
-...was with creating the chart. The data consist of pretty big numbers in a pretty wide range. Tens of billions to tens of millions on the first axis, billions to tens of thousands on the second one, and small, densely packed, negative and positive numbers on the third axis.<br>
-The time for the task was limited, so I had to quickly find a chart library that can handle this kind of data and that can draw a scatter chart. Also I was looking for something as simple as possible, but with documentation good enough to get in up and running in a no time. As it turned out, it was not easy.
-At the beginning I tried the [Apex Charts](https://apexcharts.com/). It has very pretty [bubble chart example](https://apexcharts.com/javascript-chart-demos/bubble-charts/simple/) with nice colors and fancy animations, and it can be easily integrated with React. But it rendered the data far outside the visible area and I couldn't find a way to center it. Documentation was not helpful and the time was running, so I switched to [Recharts](http://recharts.org/en-US/). Recharts is not as pretty, but it's simple and also prepared for Redux. Unfortunately after feeding it with data it started to throw lots of warnings interspersed with errors, so I switched again. Third attempt was with [TauCharts](https://www.taucharts.com). TauCharts rendered the data quickly and without bigger problems.<br>
-However, I must warn you that the chart is not very pretty. Due to the big differences between the three leaders and the rest of the stake, majority of dots are crowded in the corner. If I had more time, I would definitely try to show them in a more elegant way. Maybe I would took extreme values out of the graph and show them separately, or alter them in such way, they would appear on the borders of the graph.<br>
-Also the dot sizes (the Z axis) isn't accurate. I just took the absolute values from the negative ones, because it's hard to draw a circle with the negative diameter. Better way would be to bump up all the Z axis values by the size of the absolute of the lower value (plus something, to not get the zero diameter) and display them that way.<br>;
-Either way, I would have to play some more with the graph library to make it work as it should.
-
 ## Technical details
 
 The site is using Redux and Saga. I know it's an overkill to use such big libraries in such small project. It would work fine with React's native state and some Context to provide data to the components. In fact in this scale, even simple props would do the job. But I wanted to show you, that I'm comfortable with using Redux. And considering the fact that I will have to do something more with this project and I have no idea what it will be, I wanted to have a decent structure, to be prepared for the worst.
@@ -29,7 +21,7 @@ Other third party libraries used in the project are:<br>
 
 * `Axios` - for HTTP
 * `Numeral` - for formating big numbers
-* `TauCharts` - for, well, charts
+* `Echarts` and `TauCharts` - for, well, charts
 * `ReactContainerDimensions` - for providing the charts with container dimensions
 
 ## Responsibility
@@ -55,13 +47,7 @@ That's why I'm looking for the job. Not only to kill the boredom, have fun and d
 
 ## What next, what could be done better
 
-It would be a good idea to research some other charts libraries and do the chart nicer and more readable.<br>
 I should also use LESS or SASS instead of CSS. I borrowed the main styling from my [other test project](https://github.com/EDi-nabi/githubers), just to save some time, but I've lost all I gained because I had to rewrite it from LESS to CSS and copy/paste colors everywhere. :)
-
-## Sunday update
-
-These "not very pretty" charts bothered me so much, I decided to try out another library. [ECharts](https://ecomfe.github.io/echarts-doc/public/en/index.html) version is much better, prettier and have these fancy sliders to zoom into the crowded corner. :)
-
 
 # Standard React readme
 
