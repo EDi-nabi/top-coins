@@ -9,7 +9,7 @@ export class Overview extends Component {
     const rows = this.props.coins.slice(0, this.props.amount).map(coin => {
 
       let priceChange = coin.quote.USD['percent_change_24h'];
-      if (priceChange < 0) {
+      if (priceChange > 0) {
         priceChange = <span className={ styles.green }>{numeral(coin.quote.USD['percent_change_24h'] / 100).format('0,0.00%')}</span>
       } else {
         priceChange = <span className={ styles.red }>{ numeral(coin.quote.USD['percent_change_24h'] / 100).format('0,0.00%') }</span>

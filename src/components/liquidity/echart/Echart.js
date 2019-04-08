@@ -104,8 +104,8 @@ export class Echart extends Component {
           filterMode: 'filter',
           show: true,
           xAxisIndex: [0],
-          start: 0,
-          end: zoom,
+          // start: 0,
+          // end: zoom,
         },
         {
           type: 'slider',
@@ -113,22 +113,22 @@ export class Echart extends Component {
           show: true,
           yAxisIndex: [0],
           left: '93%',
-          start: 0,
-          end: zoom,
+          // start: 0,
+          // end: zoom,
         },
         {
           type: 'inside',
           filterMode: 'filter',
           xAxisIndex: [0],
-          start: 0,
-          end: zoom,
+          // start: 0,
+          // end: zoom,
         },
         {
           type: 'inside',
           filterMode: 'filter',
           yAxisIndex: [0],
-          start: 0,
-          end: zoom,
+          // start: 0,
+          // end: zoom,
         }
       ],
       series: [
@@ -164,33 +164,18 @@ export class Echart extends Component {
               shadowColor: 'rgba(162, 92, 3, 0.2)',
               shadowOffsetY: 5,
               color: (data) => {
-                console.log(data.data[3]);
                 if(data.data[3] < 0) {
-                  return '#ee0000';
+                  return new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
+                    { offset: 0, color: 'rgb(249, 165, 10)' },
+                    { offset: 1, color: 'rgb(249, 129, 10)' },
+                  ])
                 } else {
-                  return '#00ff00';
-                  // new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
-                  //   {
-                  //     offset: 0,
-                  //     color: 'rgb(249, 209, 10)',
-                  //   },
-                  //   {
-                  //     offset: 1,
-                  //     color: 'rgb(249, 175, 10)',
-                  //   }
-                  // ])
+                  return new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
+                    { offset: 0, color: 'rgb(249, 209, 10)' },
+                    { offset: 1, color: 'rgb(249, 175, 10)' },
+                  ])
                 }
               },
-              // color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [
-              //   {
-              //     offset: 0,
-              //     color: 'rgb(249, 209, 10)',
-              //   },
-              //   {
-              //     offset: 1,
-              //     color: 'rgb(249, 175, 10)',
-              //   }
-              // ]),
             }
           }
         },
